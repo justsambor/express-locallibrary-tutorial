@@ -7,7 +7,7 @@ block content
         div.form-group
             label(for='book') Book:
             select#book.form-control(type='select' placeholder='Select book' name='book' required='true' )
-                for book in books
+                for book in book_list
                     if bookinstance
                         //- Handle GET form, where book.author is an object, and POST form, where it is a string.
                         option(

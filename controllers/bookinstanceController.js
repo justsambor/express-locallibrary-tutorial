@@ -163,7 +163,7 @@ exports.bookinstance_update_get = function(req, res, next) {
             return next(err);
         }
         // Success.
-        res.render('bookinstance_form', { title: 'Update Bookinstance', books:results.books, bookinstance:results.bookinstance });
+        res.render('bookinstance_form', { title: 'Update Bookinstance', book_list:results.books, bookinstance:results.bookinstance });
     });
 
 };
@@ -212,7 +212,7 @@ exports.bookinstance_update_post = [
             }, function(err, results) {
                 if (err) { return next(err); }
 
-                res.render('bookinstance_form', { title: 'Update Bookinstance', books: results.books, bookinstance: bookinstance, errors: errors.array() });
+                res.render('bookinstance_form', { title: 'Update Bookinstance', book_list: results.books, bookinstance: bookinstance, errors: errors.array() });
             });
             return;
         }
